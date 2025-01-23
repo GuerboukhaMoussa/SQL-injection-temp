@@ -47,19 +47,18 @@ SLEEP(5) : Introduit un délai de 5 secondes dans la réponse du serveur si la c
 Ce payload permet de déterminer, caractère par caractère, le contenu des champs sensibles en mesurant les délais de réponse.
 
 ## Étape 4 : Reproduire l'Attaque
-Ouvrez l'application dans votre navigateur.
+-   Ouvrez l'application dans votre navigateur.
 
-Identifiez un point d'entrée vulnérable à l'injection SQL (par exemple, un champ de formulaire).
+-   Identifiez un point d'entrée vulnérable à l'injection SQL (par exemple, un champ de formulaire).
 
-Injectez le payload dans le champ vulnérable.
+-   Injectez le payload dans le champ vulnérable.
 
-Observez le temps de réponse du serveur :
+-   Observez le temps de réponse du serveur :
 
-Si la réponse est retardée de 5 secondes, cela signifie que la condition est vraie.
+      Si la réponse est retardée de 5 secondes, cela signifie que la condition est vraie.
+      Si la réponse est immédiate, la condition est fausse.
 
-Si la réponse est immédiate, la condition est fausse.
-
-Répétez ce processus pour chaque caractère jusqu'à reconstruire entièrement le nom d'utilisateur.
+-   Répétez ce processus pour chaque caractère jusqu'à reconstruire entièrement le nom d'utilisateur.
 
 Exemple de Résultat
   Après plusieurs requêtes, vous pourrez extraire le nom d'utilisateur de la table users. Par exemple :
