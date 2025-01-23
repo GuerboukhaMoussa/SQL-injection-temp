@@ -23,7 +23,7 @@ cd SQL-injection-temporelle
 ## Étape 2 : Lancer le Projet avec Docker Compose
   Dans le répertoire du projet, utilisez Docker Compose pour construire et lancer les services :
   
-      docker-compose up --build
+      docker compose up --build
 
 Une fois les conteneurs en cours d'exécution, vous pouvez accéder à l'application via un navigateur web à l'adresse suivante :
 
