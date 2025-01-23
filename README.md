@@ -14,7 +14,7 @@ Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votr
 2. Clonez le dépôt Git en utilisant la commande suivante :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/SQL-injection-temporelle.git
+   git clone https://github.com/GuerboukhaMoussa/SQL-injection-temp.git
 Accédez au répertoire du projet :
 
 bash
