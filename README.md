@@ -33,12 +33,12 @@ L'injection SQL temporelle est une technique qui exploite les délais dans les r
 
 Payload Utilisé
       
-      ’ AND IF(ASCII(SUBSTRING((SELECT username FROM users LIMIT 1), 1, 1)) > 100, SLEEP(5), 0) --
+     aa' OR IF(ASCII(SUBSTRING((SELECT username FROM users LIMIT 1), 1, 1)) > 64, SLEEP(5), 0); --
 
 Explication du Payload
 ASCII(SUBSTRING(...)) : Extrait le premier caractère du nom d'utilisateur et le convertit en valeur ASCII.
 
-IF(...) : Vérifie si la valeur ASCII du caractère est supérieure à 100.
+IF(...) : Vérifie si la valeur ASCII du caractère est supérieure à 64.
 
 SLEEP(5) : Introduit un délai de 5 secondes dans la réponse du serveur si la condition est vraie.
 
