@@ -1,7 +1,7 @@
 
 # Temporelle SQL Injection: Setup and Exploitation Guide
 
-This guide walks you through setting up a vulnerable Flask application, running it on your local machine, and exploiting the email body injection vulnerability to understand how such issues work in real-world scenarios. **Use this guide only in a controlled environment for educational purposes.**
+Ce guide a pour but de vous montrer comment exploiter une vulnérabilité d'injection SQL temporelle dans une application web. Vous apprendrez à configurer un environnement sécurisé pour tester cette attaque et comprendre son fonctionnement en détail. **Use this guide only in a controlled environment for educational purposes.**
 
 ---
 
