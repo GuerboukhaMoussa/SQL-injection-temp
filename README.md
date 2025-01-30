@@ -1,3 +1,10 @@
+
+# Temporelle SQL Injection: Setup and Exploitation Guide
+
+This guide walks you through setting up a vulnerable Flask application, running it on your local machine, and exploiting the email body injection vulnerability to understand how such issues work in real-world scenarios. **Use this guide only in a controlled environment for educational purposes.**
+
+---
+
 ## Prérequis
 
 Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votre machine :
@@ -8,7 +15,8 @@ Avant de commencer, assurez-vous d'avoir les outils suivants installés sur votr
 
 ---
 
-## Étape 1 : Cloner le Dépôt
+## Setting Up the Application
+### Step 1 : Cloner le Dépôt
 
 1. Ouvrez un terminal.
 2. Clonez le dépôt Git en utilisant la commande suivante :
@@ -20,7 +28,7 @@ Accédez au répertoire du projet :
 bash
 Copy
 cd SQL-injection-temporelle
-## Étape 2 : Lancer le Projet avec Docker Compose
+### Step 2 : Lancer le Projet avec Docker Compose
   Dans le répertoire du projet, utilisez Docker Compose pour construire et lancer les services :
   
       docker compose up --build
@@ -28,7 +36,7 @@ cd SQL-injection-temporelle
 Une fois les conteneurs en cours d'exécution, vous pouvez accéder à l'application via un navigateur web à l'adresse suivante :
 
       http://localhost:8080/login.php
-## Étape 3 : Comprendre l'Attaque par Injection SQL Temporelle
+### Step 3 : Comprendre l'Attaque par Injection SQL Temporelle
 L'injection SQL temporelle est une technique qui exploite les délais dans les réponses du serveur pour extraire des données sensibles. Voici un exemple de payload utilisé pour cette attaque :
 
 Payload Utilisé
@@ -46,7 +54,7 @@ SLEEP(5) : Introduit un délai de 5 secondes dans la réponse du serveur si la c
 
 Ce payload permet de déterminer, caractère par caractère, le contenu des champs sensibles en mesurant les délais de réponse.
 
-## Étape 4 : Reproduire l'Attaque
+### Step 4 : Reproduire l'Attaque
 -   Ouvrez l'application dans votre navigateur.
 
 -   Identifiez un point d'entrée vulnérable à l'injection SQL (par exemple, un champ de formulaire).
